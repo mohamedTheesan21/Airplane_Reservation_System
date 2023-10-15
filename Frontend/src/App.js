@@ -1,5 +1,4 @@
 import Login from './Login'
-import Signup from "./Signup";
 import Navbar from './component/Navbar';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import HomeScreen from './screen/HomeScreen';
@@ -28,7 +27,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login />}></Route>
-        <Route path='/signup' element={<Signup />}></Route>
         <Route path='/home' element={<HomeScreen />}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/search' element = {<Search/>}></Route>
