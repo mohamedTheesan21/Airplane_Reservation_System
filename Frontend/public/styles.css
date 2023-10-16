@@ -107,10 +107,28 @@
 /*navBar */
 
 .container-fluid{
-    background-color: white;
+    /* background-color: white; */
     
 }
 
 .nav-link{
     color: red;
+}
+
+.blackNavbar{
+    background-color: white;
+}
+
+/*seatSelection*/
+
+.allTable{
+    padding: 7% 12%;
+}
+.seatHeading{
+    padding-bottom: 30px;
+    color:#1F4172;
+}
+
+.seatTable{
+    ;
 }

@@ -1,116 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const HomeScreen = () => {
-  // State to manage input values
-  const [origin, setOrigin] = useState('');
-  const [destination, setDestination] = useState('');
-
-  // State to store search results
-  const [searchResults, setSearchResults] = useState([]);
-
-  // Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Perform flight search logic here
-    // You can make API calls to retrieve flight data
-    // For this example, let's assume we have a predefined list of flights
-
-    const flights = [
-      { origin: 'CGK', destination: 'BKK', flightNumber: 'BA101' },
-      { origin: 'BIA', destination: 'DEL', flightNumber: 'BA202' },
-      // Add more flight data here
-    ];
-
-    const filteredFlights = flights.filter(
-      (flight) => flight.origin === origin && flight.destination === destination
-    );
-
-    setSearchResults(filteredFlights);
-  };
-
+  //About us
   return (
     <div>
-      <div className="d-flex justify-content-center align-items-center ">
-        <div className="container-fluid w-75">
-          <h1 className='headingFlight'>Find a Flight</h1>
-          <form id="flight-search-form">
-            <div className="row allrow">
-              <div className="col-md-4">
-                <div className="form-groupHome">
-                  <label className="p-2" for="departure">
-                    From:{" "}
-                  </label>
-                  <select
-                    className="gray-background"
-                    id="departure"
-                    name="departure"
-                    required
-                  >
-                    <option value="CGK">CGK(Indonesia)</option>
-                    <option value="DPS">DPS(Indonesia)</option>
-                    <option value="BIA">BIA(Sri Lanka)</option>
-                    <option value="HRI">HRI(Sri Lanka)</option>
-                    <option value="DEL">DEL(India)</option>
-                    <option value="BOM">BOM(India)</option>
-                    <option value="MAA">MAA(India)</option>
-                    <option value="BKK">BKK(Thailand)</option>
-                    <option value="DMK">DMK(Thailand)</option>
-                    <option value="SIN">SIN(Singapore)</option>
-                  </select>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="form-groupHome">
-                  <label className="p-2" for="destination">
-                    To:{" "}
-                  </label>
-                  <select
-                    className="gray-background"
-                    id="destination"
-                    name="destination"
-                    required
-                  >
-                    <option value="CGK">CGK(Indonesia)</option>
-                    <option value="DPS">DPS(Indonesia)</option>
-                    <option value="BIA">BIA(Sri Lanka)</option>
-                    <option value="HRI">HRI(Sri Lanka)</option>
-                    <option value="DEL">DEL(India)</option>
-                    <option value="BOM">BOM(India)</option>
-                    <option value="MAA">MAA(India)</option>
-                    <option value="BKK">BKK(Thailand)</option>
-                    <option value="DMK">DMK(Thailand)</option>
-                    <option value="SIN">SIN(Singapore)</option>
-                  </select>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="form-groupHome">
-                  <label className="p-2" for="departure-date">
-                    When
-                  </label>
-                  <input
-                    className="gray-background"
-                    type="date"
-                    id="departure-date"
-                    name="departure-date"
-                    required
-                  />
+      <div className="bg-info">
+        <div className="p-5">
+          <h2>About Us</h2>
+          <p>
+            Welcome to B Airways, where flying is not just a journey. it's an
+            experience that soars above the ordinary. As a proud subsidiary of
+            Virgin Airlines, we bring the exceptional standards and spirit of
+            innovation that Virgin is renowned for to the skies. Our team
+            comprises individuals who possess an innate understanding of
+            aviation, ensuring that every flight with B Airways is a seamless
+            and unforgettable adventure. We believe that some people just know
+            how to fly, and our passion for aviation is evident in every detail
+            of your journey with us. From world-class service to unparalleled
+            comfort, join us in experiencing the magic of flight as it was meant
+            to be.
+          </p>
+        </div>
+      </div>
+
+      <div className="cards">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-4 mb-3">
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  src="/images/plane.jpeg"
+                  className="card-img-top"
+                  alt="..."
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <button type="submit" className="btn btn-dark btn-lg submitBtn">
-              Let's go!
-            </button>
-          </form>
+            <div className="col-sm-12 col-md-4 mb-3">
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  src="/images/plane2.jpg"
+                  className="card-img-top"
+                  alt="..."
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-12 col-md-4 mb-3">
+              <div className="card" style={{ width: "18rem" }}>
+                <img
+                  src="/images/plane3.jpg"
+                  className="card-img-top"
+                  alt="..."
+                />
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="row next-line">
-        <h2 className='availableFlight'>Available Flights</h2>
-        <ul id="flight-results">
-          {/* Flight search results will be displayed here */}
-        </ul>
       </div>
     </div>
   );

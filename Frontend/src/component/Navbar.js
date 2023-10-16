@@ -1,50 +1,52 @@
-import React from 'react'
+import React from "react";
 
 function Navbar(props) {
-  
-    return (
-      <nav className="navbar navbar-expand-lg bg-body-tertiary blackNavbar">
-        <div className="container-fluid">
-          <a className="navfont navbar-brand" href="">
-            B Airline
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <a className="navfont nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="navfont nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="navfont nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-            </ul>
-          </div>
+  // bg-body-tertiary
+  return (
+    <nav className="blackNavbar navbar navbar-expand-lg ">
+      <div className="container-fluid">
+        <a className="navfont navbar-brand" href="">
+          B Airline
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <a
+                className="navfont nav-link active"
+                aria-current="page"
+                href="#"
+              >
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="navfont nav-link" href="#">
+                Features
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="navfont nav-link" href="#">
+                Pricing
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    );
+      </div>
+    </nav>
+  );
 }
 
-Navbar.propTypes = {
+Navbar.propTypes = {};
 
-}
-
-export default Navbar
+export default Navbar;
