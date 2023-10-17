@@ -99,10 +99,6 @@
     border-radius: 10px;
     padding: 10%;
 }
-.availableFlight{
-    position: relative;
-    left: 17%;
-}
 
 /*navBar */
 
@@ -129,6 +125,8 @@
     color:#1F4172;
 }
 
-.seatTable{
-    ;
+/* cards */
+.cards{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }

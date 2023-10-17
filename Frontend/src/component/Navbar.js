@@ -25,18 +25,18 @@ function Navbar(props) {
               <a
                 className="navfont nav-link active"
                 aria-current="page"
-                href="#"
+                href="/home"
               >
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="navfont nav-link" href="#">
+              <a className="navfont nav-link" href="/seatselection">
                 Features
               </a>
             </li>
             <li className="nav-item">
-              <a className="navfont nav-link" href="#">
+              <a className="navfont nav-link" href="/booking">
                 Pricing
               </a>
             </li>

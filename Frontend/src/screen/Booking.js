@@ -116,7 +116,7 @@ const Booking = () => {
 
             <button
               type="submit"
-              className="btn btn-primary btn-lg submitBtn mx-auto"
+              className="btn btn-primary btn-lg submitBtn"
             >
               Let's go!
             </button>
