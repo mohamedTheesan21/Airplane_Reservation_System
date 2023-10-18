@@ -39,6 +39,11 @@ function Navbar(props) {
                 Booking
               </a>
             </li>
+            <li className="nav-item">
+              <a className="navfont nav-link" href="/payment">
+                payment
+              </a>
+            </li>
           </ul>
         </div>
       </div>

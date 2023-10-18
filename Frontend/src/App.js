@@ -7,6 +7,7 @@ import Register from "./screen/Register";
 import React, { useEffect, useState } from "react";
 import Booking from "./screen/Booking";
 import SeatSelection from "./screen/SeatSelection";
+import Payment from "./screen/Payment";
 
 const userIsGuess = false;
 
@@ -33,6 +34,7 @@ function App() {
           ></Route>
           <Route path="/booking" element={<Booking />}></Route>
           <Route path="/seatselection" element={<SeatSelection />}></Route>
+          <Route path="/payment" element={<Payment />}></Route>
         </Routes>
       </BrowserRouter>
       <Footer />
