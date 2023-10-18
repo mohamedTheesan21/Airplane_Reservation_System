@@ -1,11 +1,10 @@
 import React from "react";
 
 function Navbar(props) {
-  // bg-body-tertiary
   return (
     <nav className="blackNavbar navbar navbar-expand-lg ">
       <div className="container-fluid">
-        <a className="navfont navbar-brand" href="">
+        <a className="navfont navbar-brand" href="/home">
           B Airline
         </a>
         <button
@@ -32,12 +31,12 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <a className="navfont nav-link" href="/seatselection">
-                Features
+                Seat selection
               </a>
             </li>
             <li className="nav-item">
               <a className="navfont nav-link" href="/booking">
-                Pricing
+                Booking
               </a>
             </li>
           </ul>

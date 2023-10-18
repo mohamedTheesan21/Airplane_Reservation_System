@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import Navbar from "../component/Navbar";
 
 const HomeScreen = () => {
   //About us
   return (
     <div>
+      <Navbar />
       <div className="bg-info">
         <div className="p-5">
           <h2>About Us</h2>

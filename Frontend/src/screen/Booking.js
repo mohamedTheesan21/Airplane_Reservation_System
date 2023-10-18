@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../component/Navbar";
 const Booking = () => {
   // State to manage input values
   const [origin, setOrigin] = useState("");
@@ -38,96 +39,99 @@ const Booking = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="d-flex justify-content-center align-items-center ">
-        <div className="container-fluid">
-          <h1 className="text-center">Find a Flight</h1>
-          <form id="flight-search-form" onSubmit={handleSubmit}>
-            <div className="row allrow col-sm-12">
-              <div className="col-sm-12 col-md-4">
-                <div className="form-groupHome">
-                  <label className="p-2" htmlFor="departure">
-                    From:{" "}
-                  </label>
-                  <select
-                    className="gray-background"
-                    id="departure"
-                    name="departure"
-                    required
-                    value={origin}
-                    onChange={handleOriginChange}
-                  >
-                    <option value="">Select origin</option>
-                    <option value="CGK">CGK(Indonesia)</option>
-                    <option value="DPS">DPS(Indonesia)</option>
-                    <option value="BIA">BIA(Sri Lanka)</option>
-                    <option value="HRI">HRI(Sri Lanka)</option>
-                    <option value="DEL">DEL(India)</option>
-                    <option value="BOM">BOM(India)</option>
-                    <option value="MAA">MAA(India)</option>
-                    <option value="BKK">BKK(Thailand)</option>
-                    <option value="DMK">DMK(Thailand)</option>
-                    <option value="SIN">SIN(Singapore)</option>
-                  </select>
+    <div>
+      <Navbar />
+      <div className="container-fluid">
+        <div className="d-flex justify-content-center align-items-center ">
+          <div className="container-fluid">
+            <h1 className="text-center">Find a Flight</h1>
+            <form id="flight-search-form" onSubmit={handleSubmit}>
+              <div className="row allrow col-sm-12">
+                <div className="col-sm-12 col-md-4">
+                  <div className="form-groupHome">
+                    <label className="p-2" htmlFor="departure">
+                      From:{" "}
+                    </label>
+                    <select
+                      className="gray-background"
+                      id="departure"
+                      name="departure"
+                      required
+                      value={origin}
+                      onChange={handleOriginChange}
+                    >
+                      <option value="">Select origin</option>
+                      <option value="CGK">CGK(Indonesia)</option>
+                      <option value="DPS">DPS(Indonesia)</option>
+                      <option value="BIA">BIA(Sri Lanka)</option>
+                      <option value="HRI">HRI(Sri Lanka)</option>
+                      <option value="DEL">DEL(India)</option>
+                      <option value="BOM">BOM(India)</option>
+                      <option value="MAA">MAA(India)</option>
+                      <option value="BKK">BKK(Thailand)</option>
+                      <option value="DMK">DMK(Thailand)</option>
+                      <option value="SIN">SIN(Singapore)</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-sm-12 col-md-4">
+                  <div className="form-groupHome">
+                    <label className="p-2" htmlFor="destination">
+                      To:{" "}
+                    </label>
+                    <select
+                      className="gray-background"
+                      id="destination"
+                      name="destination"
+                      required
+                      value={destination}
+                      onChange={handleDestinationChange}
+                    >
+                      <option value="">Select destination</option>
+                      <option value="CGK">CGK(Indonesia)</option>
+                      <option value="DPS">DPS(Indonesia)</option>
+                      <option value="BIA">BIA(Sri Lanka)</option>
+                      <option value="HRI">HRI(Sri Lanka)</option>
+                      <option value="DEL">DEL(India)</option>
+                      <option value="BOM">BOM(India)</option>
+                      <option value="MAA">MAA(India)</option>
+                      <option value="BKK">BKK(Thailand)</option>
+                      <option value="DMK">DMK(Thailand)</option>
+                      <option value="SIN">SIN(Singapore)</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-sm-12 col-md-4">
+                  <div className="form-groupHome">
+                    <label className="p-2" htmlFor="departure-date">
+                      When
+                    </label>
+                    <input
+                      className="gray-background"
+                      type="date"
+                      id="departure-date"
+                      name="departure-date"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-4">
-                <div className="form-groupHome">
-                  <label className="p-2" htmlFor="destination">
-                    To:{" "}
-                  </label>
-                  <select
-                    className="gray-background"
-                    id="destination"
-                    name="destination"
-                    required
-                    value={destination}
-                    onChange={handleDestinationChange}
-                  >
-                    <option value="">Select destination</option>
-                    <option value="CGK">CGK(Indonesia)</option>
-                    <option value="DPS">DPS(Indonesia)</option>
-                    <option value="BIA">BIA(Sri Lanka)</option>
-                    <option value="HRI">HRI(Sri Lanka)</option>
-                    <option value="DEL">DEL(India)</option>
-                    <option value="BOM">BOM(India)</option>
-                    <option value="MAA">MAA(India)</option>
-                    <option value="BKK">BKK(Thailand)</option>
-                    <option value="DMK">DMK(Thailand)</option>
-                    <option value="SIN">SIN(Singapore)</option>
-                  </select>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-4">
-                <div className="form-groupHome">
-                  <label className="p-2" htmlFor="departure-date">
-                    When
-                  </label>
-                  <input
-                    className="gray-background"
-                    type="date"
-                    id="departure-date"
-                    name="departure-date"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
 
-            <button
-              type="submit"
-              className="btn btn-primary btn-lg submitBtn"
-            >
-              Let's go!
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="btn btn-primary btn-lg submitBtn"
+              >
+                Let's go!
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-      <div className="row next-line text-center">
-        <h2 className="availableFlight">Available Flights</h2>
-        <ul id="flight-results">
-          {/* Flight search results will be displayed here */}
-        </ul>
+        <div className="row next-line text-center">
+          <h2 className="availableFlight">Available Flights</h2>
+          <ul id="flight-results">
+            {/* Flight search results will be displayed here */}
+          </ul>
+        </div>
       </div>
     </div>
   );
