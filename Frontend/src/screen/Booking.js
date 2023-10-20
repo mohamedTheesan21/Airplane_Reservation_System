@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../component/Navbar";
+import FlightCard from "../component/FlightCard";
+
 const Booking = () => {
   // State to manage input values
   const [origin, setOrigin] = useState("");
@@ -131,6 +133,28 @@ const Booking = () => {
           <ul id="flight-results">
             {/* Flight search results will be displayed here */}
           </ul>
+        </div>
+      </div>
+      <div className="cards">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-4 mb-3">
+              <FlightCard image="/images/Boeing-737.jpg"
+              model = "Airbus-A380" />
+            </div>
+            <div className="col-sm-12 col-md-4 mb-3">
+              <FlightCard image="/images/plane.jpeg" 
+              model = "Boeing-737" />
+            </div>
+            <div className="col-sm-12 col-md-4 mb-3">
+              <FlightCard image="/images/Airbus-A380.jpg" 
+              model = "Boeing-737" />
+            </div>
+            <div className="col-sm-12 col-md-4 mb-3">
+              <FlightCard image="/images/plane3.jpg" 
+              model = "Boeing-737" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
