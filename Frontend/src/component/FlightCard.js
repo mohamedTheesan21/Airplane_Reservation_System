@@ -8,8 +8,8 @@ function FlightCard(props) {
         <h5 className="card-title">{props.model}</h5>
         <p className="card-text"></p>
         <p className="card-text"></p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
+        <a href="/seatselection" className="btn btn-primary">
+          Book Seat
         </a>
       </div>
     </div>

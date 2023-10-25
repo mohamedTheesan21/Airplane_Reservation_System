@@ -44,6 +44,11 @@ function Navbar(props) {
                 payment
               </a>
             </li>
+            <li className="nav-item">
+              <a className="navfont nav-link" href="/admin">
+                admin
+              </a>
+            </li>
           </ul>
         </div>
       </div>

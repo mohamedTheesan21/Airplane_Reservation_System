@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import validation from "./LoginValidation";
+import Logo from "../component/Logo";
 
 function Login() {
   const [values, setValues] = useState({
@@ -35,72 +36,75 @@ function Login() {
     setErrors(validation(values));
   };
   return (
-    <div className="background d-flex justify-content-center align-items-center vh-100 rounded-2">
-      <div className="signup p-3 rounded w-25">
-        <h2>Sign-in</h2>
-        <form action="" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username" className="form-label">
-              <strong>username</strong>
-            </label>
-            <div className="input-group flex-nowrap">
-              <span class="input-group-text" id="addon-wrapping">
-                <i class="fa fa-user icon"></i>
-              </span>
-              <input
-                type="text"
-                placeholder="Enter username"
-                name="username"
-                onChange={handleInput}
-                className="form-control rounded-0"
-              ></input>
+    <div>
+      <Logo />
+      <div className="background d-flex justify-content-center align-items-center vh-100 rounded-2">
+        <div className="signup p-3 rounded w-25">
+          <h2>Sign-in</h2>
+          <form action="" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="username" className="form-label">
+                <strong>username</strong>
+              </label>
+              <div className="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="fa fa-user icon"></i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Enter username"
+                  name="username"
+                  onChange={handleInput}
+                  className="form-control rounded-0"
+                ></input>
+              </div>
+              {errors.username && (
+                <span className="text-danger">{errors.username}</span>
+              )}
             </div>
-            {errors.username && (
-              <span className="text-danger">{errors.username}</span>
-            )}
-          </div>
-          <div>
-            <label htmlFor="password" className="form-label">
-              <strong>password</strong>
-            </label>
-            <div className="input-group flex-nowrap">
-              <span class="input-group-text" id="addon-wrapping">
-                <i class="fa fa-lock"></i>
-              </span>
-              <input
-                type="password"
-                placeholder="Enter password"
-                name="password"
-                onChange={handleInput}
-                className="form-control rounded-0"
-              ></input>
+            <div>
+              <label htmlFor="password" className="form-label">
+                <strong>password</strong>
+              </label>
+              <div className="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="fa fa-lock"></i>
+                </span>
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  name="password"
+                  onChange={handleInput}
+                  className="form-control rounded-0"
+                ></input>
+              </div>
+              {errors.password && (
+                <span className="text-danger">{errors.password}</span>
+              )}
             </div>
-            {errors.password && (
-              <span className="text-danger">{errors.password}</span>
-            )}
-          </div>
-          <p></p>
-          <button type="submit" className="btn btn-success w-100">
-            Login
-          </button>
-          <p></p>
-          <Link
-            to="/register"
-            className="btn btn-default border w-100 bg-light text-decoration-none"
-          >
-            Create Account
-          </Link>
-          <p></p>
-          <p className="text-center">
-            <strong>OR</strong>
-          </p>
-          <Link
-            to="/Booking"
-            className="btn btn-default border w-100 bg-light text-decoration-none"
-          >
-            Visit as a guest
-          </Link>
-        </form>
+            <p></p>
+            <button type="submit" className="btn btn-success w-100">
+              Login
+            </button>
+            <p></p>
+            <Link
+              to="/register"
+              className="btn btn-default border w-100 bg-light text-decoration-none"
+            >
+              Create Account
+            </Link>
+            <p></p>
+            <p className="text-center">
+              <strong>OR</strong>
+            </p>
+            <Link
+              to="/Booking"
+              className="btn btn-default border w-100 bg-light text-decoration-none"
+            >
+              Visit as a guest
+            </Link>
+          </form>
+        </div>
       </div>
     </div>
   );

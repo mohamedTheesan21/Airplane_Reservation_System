@@ -139,20 +139,16 @@ const Booking = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-4 mb-3">
-              <FlightCard image="/images/Boeing-737.jpg"
-              model = "Airbus-A380" />
+              <FlightCard image="/images/Boeing-737.jpg" model="Airbus-A380" />
             </div>
             <div className="col-sm-12 col-md-4 mb-3">
-              <FlightCard image="/images/plane.jpeg" 
-              model = "Boeing-737" />
+              <FlightCard image="/images/plane.jpeg" model="Boeing-737" />
             </div>
             <div className="col-sm-12 col-md-4 mb-3">
-              <FlightCard image="/images/Airbus-A380.jpg" 
-              model = "Boeing-737" />
+              <FlightCard image="/images/Airbus-A380.jpg" model="Boeing-737" />
             </div>
             <div className="col-sm-12 col-md-4 mb-3">
-              <FlightCard image="/images/plane3.jpg" 
-              model = "Boeing-737" />
+              <FlightCard image="/images/plane3.jpg" model="Boeing-737" />
             </div>
           </div>
         </div>
