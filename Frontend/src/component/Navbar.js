@@ -45,7 +45,7 @@ function Navbar(props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="navfont nav-link" href="/admin">
+              <a className="navfont nav-link" href="/report">
                 admin
               </a>
             </li>
